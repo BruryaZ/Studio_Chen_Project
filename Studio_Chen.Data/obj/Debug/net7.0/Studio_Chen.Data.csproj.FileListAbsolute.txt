@@ -1,0 +1,15 @@
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\Studio_Chen\Studio_Chen.Data\bin\Debug\net7.0\Studio_Chen.Data.deps.json
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\Studio_Chen\Studio_Chen.Data\bin\Debug\net7.0\Studio_Chen.Data.dll
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\Studio_Chen\Studio_Chen.Data\bin\Debug\net7.0\Studio_Chen.Data.pdb
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\Studio_Chen\Studio_Chen.Data\bin\Debug\net7.0\Studio_Chen.Core.dll
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\Studio_Chen\Studio_Chen.Data\bin\Debug\net7.0\Studio_Chen.Core.pdb
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\Studio_Chen\Studio_Chen.Data\obj\Debug\net7.0\Studio_Chen.Data.csproj.AssemblyReference.cache
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\Studio_Chen\Studio_Chen.Data\obj\Debug\net7.0\Studio_Chen.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\Studio_Chen\Studio_Chen.Data\obj\Debug\net7.0\Studio_Chen.Data.AssemblyInfoInputs.cache
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\Studio_Chen\Studio_Chen.Data\obj\Debug\net7.0\Studio_Chen.Data.AssemblyInfo.cs
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\Studio_Chen\Studio_Chen.Data\obj\Debug\net7.0\Studio_Chen.Data.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\Studio_Chen\Studio_Chen.Data\obj\Debug\net7.0\Studio_Chen.Data.csproj.CopyComplete
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\Studio_Chen\Studio_Chen.Data\obj\Debug\net7.0\Studio_Chen.Data.dll
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\Studio_Chen\Studio_Chen.Data\obj\Debug\net7.0\refint\Studio_Chen.Data.dll
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\Studio_Chen\Studio_Chen.Data\obj\Debug\net7.0\Studio_Chen.Data.pdb
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\Studio_Chen\Studio_Chen.Data\obj\Debug\net7.0\ref\Studio_Chen.Data.dll

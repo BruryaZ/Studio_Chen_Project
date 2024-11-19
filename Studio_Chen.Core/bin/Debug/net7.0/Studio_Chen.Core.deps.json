@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Studio_Chen.Core/1.0.0": {
+        "runtime": {
+          "Studio_Chen.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Studio_Chen.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

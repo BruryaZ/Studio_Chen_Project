@@ -1,0 +1,6 @@
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\Studio_Chen\Studio_Chen.TEST\bin\Debug\net7.0\CoverletSourceRootsMapping
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\Studio_Chen\Studio_Chen.TEST\obj\Debug\net7.0\Studio_Chen.TEST.csproj.AssemblyReference.cache
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\Studio_Chen\Studio_Chen.TEST\obj\Debug\net7.0\Studio_Chen.TEST.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\Studio_Chen\Studio_Chen.TEST\obj\Debug\net7.0\Studio_Chen.TEST.AssemblyInfoInputs.cache
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\Studio_Chen\Studio_Chen.TEST\obj\Debug\net7.0\Studio_Chen.TEST.AssemblyInfo.cs
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\Studio_Chen\Studio_Chen.TEST\obj\Debug\net7.0\Studio_Chen.TEST.csproj.CoreCompileInputs.cache

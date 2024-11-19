@@ -1,0 +1,49 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Studio_Chen.Service/1.0.0": {
+        "dependencies": {
+          "Studio_Chen.Data": "1.0.0"
+        },
+        "runtime": {
+          "Studio_Chen.Service.dll": {}
+        }
+      },
+      "Studio_Chen.Core/1.0.0": {
+        "runtime": {
+          "Studio_Chen.Core.dll": {}
+        }
+      },
+      "Studio_Chen.Data/1.0.0": {
+        "dependencies": {
+          "Studio_Chen.Core": "1.0.0"
+        },
+        "runtime": {
+          "Studio_Chen.Data.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Studio_Chen.Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Studio_Chen.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Studio_Chen.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
