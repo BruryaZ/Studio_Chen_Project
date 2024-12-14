@@ -9,6 +9,10 @@ namespace Studio_Chen.Core.Repositories
 {
     public interface ILessonRepository
     {
-        List<Lesson> GetList();
+        List<Lesson> GetAll();
+        Lesson? GetById(int id);
+        Lesson Add(Lesson course);
+        Lesson Update(Lesson course);
+        void Delete(int id);
     }
 }

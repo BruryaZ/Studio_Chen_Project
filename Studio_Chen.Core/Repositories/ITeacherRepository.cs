@@ -9,6 +9,10 @@ namespace Studio_Chen.Core.Repositories
 {
     public interface ITeacherRepository
     {
-        List<Teacher> GetList();
+        List<Teacher> GetAll();
+        Teacher? GetById(int id);
+        Teacher Add(Teacher course);
+        Teacher Update(Teacher course);
+        void Delete(int id);
     }
 }

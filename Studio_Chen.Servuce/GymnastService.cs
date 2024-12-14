@@ -17,9 +17,30 @@ namespace Studio_Chen.Service
         {
             _gymnastRepository = gymnast;
         }
-        public List<Gymnast> GetAll()
+
+        public Gymnast Add(Gymnast course)
         {
-            return _gymnastRepository.GetList();
+            return _gymnastRepository.Add(course);
+        }
+
+        public void Delete(int id)
+        {
+            _gymnastRepository.Delete(id);
+        }
+
+        public Gymnast? GetById(int id)
+        {
+            return _gymnastRepository.GetById(id);
+        }
+
+        public List<Gymnast> GetList()
+        {
+            return _gymnastRepository.GetAll();
+        }
+
+        public Gymnast Update(Gymnast course)
+        {
+            return _gymnastRepository.Update(course);
         }
     }
 }

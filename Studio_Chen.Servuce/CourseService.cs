@@ -11,9 +11,31 @@ namespace Studio_Chen.Service
         {
             _courseRepository = course;
         }
-        public List<Course> GetAll()
+
+        public Course Add(Course course)
         {
-            return _courseRepository.GetList();
+            return _courseRepository.Add(course);
+
+        }
+
+        public void Delete(int id)
+        {
+            _courseRepository.Delete(id);
+        }
+
+        public Course? GetById(int id)
+        {
+            return _courseRepository.GetById(id);
+        }
+
+        public List<Course> GetList()
+        {
+            return _courseRepository.GetAll();
+        }
+
+        public Course Update(Course course)
+        {
+            return _courseRepository.Update(course);
         }
     }
 }

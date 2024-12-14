@@ -18,16 +18,17 @@ namespace Studio_Chen.API.Controllers
         }
         // GET: api/<CourseController>
         [HttpGet]
-        public IEnumerable<Course> Get()
+        public ActionResult Get()
         {
-            return _allCourses.GetAll();
+            var courses = _allCourses.GetList();
+            return Ok(courses);
         }
 
         // GET api/<CourseController>/5
         [HttpGet("{id}")]
         public ActionResult Get(int id)
         {
-            var course = _allCourses.GetAll().Find(x => x.Identity == id);
+            var course = _allCourses.GetList().Find(x => x.Identity == id);
             if (course == null)
                 return NotFound();
             return Ok(course);
@@ -37,22 +38,23 @@ namespace Studio_Chen.API.Controllers
         [HttpPost]
         public void Post([FromBody] Course value)
         {
-            _allCourses.GetAll().Add(value);
+            _allCourses.GetList().Add(value);
         }
 
         // PUT api/<CourseController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] Course value)
         {
-            for (int i = 0; i < _allCourses.GetAll().Count; i++)
+            for (int i = 0; i < _allCourses.GetList().Count; i++)
             {
-                if (_allCourses.GetAll()[i].Identity == id)
+                if (_allCourses.GetList()[i].Identity == id)
                 {
-                    _allCourses.GetAll()[i].MeetsNumber = value.MeetsNumber;
-                    _allCourses.GetAll()[i].EndDate = value.EndDate;
-                    _allCourses.GetAll()[i].StartDate = value.StartDate;
-                    _allCourses.GetAll()[i].Type = value.Type;
-                    _allCourses.GetAll()[i].Equipment = value.Equipment;
+                    _allCourses.GetList()[i].MeetsNumber = value.MeetsNumber;
+                    _allCourses.GetList()[i].EndDate = value.EndDate;
+                    _allCourses.GetList()[i].StartDate = value.StartDate;
+                    _allCourses.GetList()[i].Type = value.Type;
+                    _allCourses.GetList()[i].Equipment = value.Equipment;
+                    _allCourses.GetList()[i].Lessons = value.Lessons;
                 }
             }
         }
@@ -61,10 +63,10 @@ namespace Studio_Chen.API.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            for (int i = 0; i < _allCourses.GetAll().Count; i++)
+            for (int i = 0; i < _allCourses.GetList().Count; i++)
             {
-                if (_allCourses.GetAll()[i].Identity == id)
-                    _allCourses.GetAll().Remove(_allCourses.GetAll()[i]);
+                if (_allCourses.GetList()[i].Identity == id)
+                    _allCourses.GetList().Remove(_allCourses.GetList()[i]);
             }
         }
     }

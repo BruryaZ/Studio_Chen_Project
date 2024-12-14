@@ -9,6 +9,10 @@ namespace Studio_Chen.Service
 {
     public interface ICourseRepository
     {
-        List<Course> GetList();
+        List<Course> GetAll();
+        Course? GetById(int id);
+        Course Add(Course course);
+        Course Update(Course course);
+        void Delete(int id);
     }
 }

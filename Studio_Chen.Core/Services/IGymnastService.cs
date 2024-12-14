@@ -9,6 +9,10 @@ namespace Studio_Chen.Core.Services
 {
     public interface IGymnastService
     {
-        List<Gymnast> GetAll();
+        List<Gymnast> GetList();
+        Gymnast? GetById(int id);
+        Gymnast Add(Gymnast course);
+        Gymnast Update(Gymnast course);
+        void Delete(int id);
     }
 }

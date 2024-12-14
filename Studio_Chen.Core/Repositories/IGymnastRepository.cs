@@ -9,6 +9,10 @@ namespace Studio_Chen.Core.Repositories
 {
     public interface IGymnastRepository
     {
-        List<Gymnast> GetList();
+        List<Gymnast> GetAll();
+        Gymnast? GetById(int id);
+        Gymnast Add(Gymnast course);
+        Gymnast Update(Gymnast course);
+        void Delete(int id);
     }
 }

@@ -19,14 +19,14 @@ namespace Studio_Chen.API.Controllers
         [HttpGet]
         public IEnumerable<Teacher> Get()
         {
-            return _allTeachers.GetAll();
+            return _allTeachers.GetList();
         }
 
         // GET api/<CourseController>/5
         [HttpGet("{id}")]
         public ActionResult Get(int id)
         {
-            var course = _allTeachers.GetAll().Find(x => x.Id == id);
+            var course = _allTeachers.GetList().Find(x => x.Id == id);
             if (course == null)
                 return NotFound();
             return Ok(course);
@@ -36,24 +36,24 @@ namespace Studio_Chen.API.Controllers
         [HttpPost]
         public void Post([FromBody] Teacher value)
         {
-            _allTeachers.GetAll().Add(value);
+            _allTeachers.GetList().Add(value);
         }
 
         // PUT api/<CourseController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] Teacher value)
         {
-            for (int i = 0; i < _allTeachers.GetAll().Count; i++)
+            for (int i = 0; i < _allTeachers.GetList().Count; i++)
             {
-                if (_allTeachers.GetAll()[i].Id == id)
+                if (_allTeachers.GetList()[i].Id == id)
                 {
-                    _allTeachers.GetAll()[i].Identity = value.Identity;
-                    _allTeachers.GetAll()[i].Address = value.Address;
-                    _allTeachers.GetAll()[i].FirstName = value.FirstName;
-                    _allTeachers.GetAll()[i].LastName = value.LastName;
-                    _allTeachers.GetAll()[i].Email = value.Email;
-                    _allTeachers.GetAll()[i].Phone = value.Phone;
-                    _allTeachers.GetAll()[i].courses = value.courses;
+                    _allTeachers.GetList()[i].Identity = value.Identity;
+                    _allTeachers.GetList()[i].Address = value.Address;
+                    _allTeachers.GetList()[i].FirstName = value.FirstName;
+                    _allTeachers.GetList()[i].LastName = value.LastName;
+                    _allTeachers.GetList()[i].Email = value.Email;
+                    _allTeachers.GetList()[i].Phone = value.Phone;
+                    _allTeachers.GetList()[i].Lessons = value.Lessons;
                 }
             }
         }
@@ -62,10 +62,10 @@ namespace Studio_Chen.API.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            for (int i = 0; i < _allTeachers.GetAll().Count; i++)
+            for (int i = 0; i < _allTeachers.GetList().Count; i++)
             {
-                if (_allTeachers.GetAll()[i].Id == id)
-                    _allTeachers.GetAll().Remove(_allTeachers.GetAll()[i]);
+                if (_allTeachers.GetList()[i].Id == id)
+                    _allTeachers.GetList().Remove(_allTeachers.GetList()[i]);
             }
         }
     }

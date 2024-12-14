@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,13 +9,6 @@ namespace Studio_Chen.Data.Models
 {
     public class Person
     {
-        static int count = 1;
-        private int id;
-
-        public int Id
-        {
-            get { return id; }
-        }
         public string Identity { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -24,7 +18,6 @@ namespace Studio_Chen.Data.Models
 
         public Person(string identity, string firstName, string lastName, string phone, string email, string address)
         {
-            id = count++;
             Identity = identity;
             FirstName = firstName;
             LastName = lastName;
@@ -34,7 +27,6 @@ namespace Studio_Chen.Data.Models
         }
         public Person()
         {
-            id = count++;
         }
     }
 }

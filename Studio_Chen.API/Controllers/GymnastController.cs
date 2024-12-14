@@ -20,14 +20,14 @@ namespace Studio_Chen.API.Controllers
         [HttpGet]
         public IEnumerable<Gymnast> Get()
         {
-            return _allGymnast.GetAll();
+            return _allGymnast.GetList();
         }
 
         // GET api/<CourseController>/5
         [HttpGet("{id}")]
         public ActionResult Get(int id)
         {
-            var course = _allGymnast.GetAll().Find(x => x.Id == id);
+            var course = _allGymnast.GetList().Find(x => x.Id == id);
             if (course == null)
                 return NotFound();
             return Ok(course);
@@ -37,23 +37,24 @@ namespace Studio_Chen.API.Controllers
         [HttpPost]
         public void Post([FromBody] Gymnast value)
         {
-            _allGymnast.GetAll().Add(value);
+            _allGymnast.GetList().Add(value);
         }
 
         // PUT api/<CourseController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] Gymnast value)
         {
-            for (int i = 0; i < _allGymnast.GetAll().Count; i++)
+            for (int i = 0; i < _allGymnast.GetList().Count; i++)
             {
-                if (_allGymnast.GetAll()[i].Id == id)
+                if (_allGymnast.GetList()[i].Id == id)
                 {
-                    _allGymnast.GetAll()[i].Address = value.Address;
-                    _allGymnast.GetAll()[i].Phone = value.Phone;
-                    _allGymnast.GetAll()[i].Identity = value.Identity;
-                    _allGymnast.GetAll()[i].FirstName = value.FirstName;
-                    _allGymnast.GetAll()[i].LastName = value.LastName;
-                    _allGymnast.GetAll()[i].Email = value.Email;
+                    _allGymnast.GetList()[i].Address = value.Address;
+                    _allGymnast.GetList()[i].Phone = value.Phone;
+                    _allGymnast.GetList()[i].Identity = value.Identity;
+                    _allGymnast.GetList()[i].FirstName = value.FirstName;
+                    _allGymnast.GetList()[i].LastName = value.LastName;
+                    _allGymnast.GetList()[i].Email = value.Email;
+                    _allGymnast.GetList()[i].lessons = value.lessons;
                 }
             }
         }
@@ -62,10 +63,10 @@ namespace Studio_Chen.API.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            for (int i = 0; i < _allGymnast.GetAll().Count; i++)
+            for (int i = 0; i < _allGymnast.GetList().Count; i++)
             {
-                if (_allGymnast.GetAll()[i].Id == id)
-                    _allGymnast.GetAll().Remove(_allGymnast.GetAll()[i]);
+                if (_allGymnast.GetList()[i].Id == id)
+                    _allGymnast.GetList().Remove(_allGymnast.GetList()[i]);
             }
         }
     }
