@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user1\\Desktop\\תכנות\\Dot net\\הגשות\\הפרויקט\\מעודכן\\Studio_Chen\\Studio_Chen.Data\\Studio_Chen.Data.csproj": {}
+    "C:\\Users\\user1\\Desktop\\תכנות\\Dot net\\הגשות\\הפרויקט\\הכי מעודכן\\Studio_Chen\\Studio_Chen.Data\\Studio_Chen.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user1\\Desktop\\תכנות\\Dot net\\הגשות\\הפרויקט\\מעודכן\\Studio_Chen\\Studio_Chen.Core\\Studio_Chen.Core.csproj": {
+    "C:\\Users\\user1\\Desktop\\תכנות\\Dot net\\הגשות\\הפרויקט\\הכי מעודכן\\Studio_Chen\\Studio_Chen.Core\\Studio_Chen.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user1\\Desktop\\תכנות\\Dot net\\הגשות\\הפרויקט\\מעודכן\\Studio_Chen\\Studio_Chen.Core\\Studio_Chen.Core.csproj",
+        "projectUniqueName": "C:\\Users\\user1\\Desktop\\תכנות\\Dot net\\הגשות\\הפרויקט\\הכי מעודכן\\Studio_Chen\\Studio_Chen.Core\\Studio_Chen.Core.csproj",
         "projectName": "Studio_Chen.Core",
-        "projectPath": "C:\\Users\\user1\\Desktop\\תכנות\\Dot net\\הגשות\\הפרויקט\\מעודכן\\Studio_Chen\\Studio_Chen.Core\\Studio_Chen.Core.csproj",
+        "projectPath": "C:\\Users\\user1\\Desktop\\תכנות\\Dot net\\הגשות\\הפרויקט\\הכי מעודכן\\Studio_Chen\\Studio_Chen.Core\\Studio_Chen.Core.csproj",
         "packagesPath": "C:\\Users\\user1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user1\\Desktop\\תכנות\\Dot net\\הגשות\\הפרויקט\\מעודכן\\Studio_Chen\\Studio_Chen.Core\\obj\\",
+        "outputPath": "C:\\Users\\user1\\Desktop\\תכנות\\Dot net\\הגשות\\הפרויקט\\הכי מעודכן\\Studio_Chen\\Studio_Chen.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user1\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -59,14 +65,14 @@
         }
       }
     },
-    "C:\\Users\\user1\\Desktop\\תכנות\\Dot net\\הגשות\\הפרויקט\\מעודכן\\Studio_Chen\\Studio_Chen.Data\\Studio_Chen.Data.csproj": {
+    "C:\\Users\\user1\\Desktop\\תכנות\\Dot net\\הגשות\\הפרויקט\\הכי מעודכן\\Studio_Chen\\Studio_Chen.Data\\Studio_Chen.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user1\\Desktop\\תכנות\\Dot net\\הגשות\\הפרויקט\\מעודכן\\Studio_Chen\\Studio_Chen.Data\\Studio_Chen.Data.csproj",
+        "projectUniqueName": "C:\\Users\\user1\\Desktop\\תכנות\\Dot net\\הגשות\\הפרויקט\\הכי מעודכן\\Studio_Chen\\Studio_Chen.Data\\Studio_Chen.Data.csproj",
         "projectName": "Studio_Chen.Data",
-        "projectPath": "C:\\Users\\user1\\Desktop\\תכנות\\Dot net\\הגשות\\הפרויקט\\מעודכן\\Studio_Chen\\Studio_Chen.Data\\Studio_Chen.Data.csproj",
+        "projectPath": "C:\\Users\\user1\\Desktop\\תכנות\\Dot net\\הגשות\\הפרויקט\\הכי מעודכן\\Studio_Chen\\Studio_Chen.Data\\Studio_Chen.Data.csproj",
         "packagesPath": "C:\\Users\\user1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user1\\Desktop\\תכנות\\Dot net\\הגשות\\הפרויקט\\מעודכן\\Studio_Chen\\Studio_Chen.Data\\obj\\",
+        "outputPath": "C:\\Users\\user1\\Desktop\\תכנות\\Dot net\\הגשות\\הפרויקט\\הכי מעודכן\\Studio_Chen\\Studio_Chen.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user1\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -83,8 +89,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\user1\\Desktop\\תכנות\\Dot net\\הגשות\\הפרויקט\\מעודכן\\Studio_Chen\\Studio_Chen.Core\\Studio_Chen.Core.csproj": {
-                "projectPath": "C:\\Users\\user1\\Desktop\\תכנות\\Dot net\\הגשות\\הפרויקט\\מעודכן\\Studio_Chen\\Studio_Chen.Core\\Studio_Chen.Core.csproj"
+              "C:\\Users\\user1\\Desktop\\תכנות\\Dot net\\הגשות\\הפרויקט\\הכי מעודכן\\Studio_Chen\\Studio_Chen.Core\\Studio_Chen.Core.csproj": {
+                "projectPath": "C:\\Users\\user1\\Desktop\\תכנות\\Dot net\\הגשות\\הפרויקט\\הכי מעודכן\\Studio_Chen\\Studio_Chen.Core\\Studio_Chen.Core.csproj"
               }
             }
           }

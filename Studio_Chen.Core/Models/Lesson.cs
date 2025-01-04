@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Studio_Chen.Core.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -10,10 +11,9 @@ namespace Studio_Chen.Data.Models
 {
     public class Lesson
     {
-        static int count = 1;
         [Key]
-        public int Identity { get; private set; }
-        public string CourseId { get; set; }
+        public int Id { get; private set; }
+        public int CourseId { get; set; }
         public Course Course { get; set; }
         public int MeetNumber { get; set; }
         public DateTime Date { get; set; }
@@ -23,9 +23,8 @@ namespace Studio_Chen.Data.Models
         public Teacher Teacher { get; set; }
         public List<Gymnast> Gymnasts { get; set; }
 
-        public Lesson(int identity, Course course, string courseId, int meetNumber, DateTime date, DateTime startHour, DateTime endHour, int teacherId, Teacher teacher, List<Gymnast> gymnasts)
+        public Lesson( Course course, int courseId, int meetNumber, DateTime date, DateTime startHour, DateTime endHour, int teacherId, Teacher teacher, List<Gymnast> gymnasts)
         {
-            Identity = identity;
             Course = course;
             CourseId = courseId;
             MeetNumber = meetNumber;
@@ -39,7 +38,6 @@ namespace Studio_Chen.Data.Models
 
         public Lesson()
         {
-            Identity = count++;
         }
     }
 }

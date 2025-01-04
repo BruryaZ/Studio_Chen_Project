@@ -1,4 +1,5 @@
-﻿using Studio_Chen.Data.Models;
+﻿using Studio_Chen.Core.Models;
+using Studio_Chen.Data.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +10,10 @@ namespace Studio_Chen.Service.Services
 {
     public interface ICourseService
     {
-        List<Course> GetList();
+        IEnumerable<Course> GetList();
         Course? GetById(int id);
         Course Add(Course course);
-        Course Update(Course course);
-        void Delete(int id);
+        Course? Update(int id, Course course);
+        void Delete(Course course);
     }
 }

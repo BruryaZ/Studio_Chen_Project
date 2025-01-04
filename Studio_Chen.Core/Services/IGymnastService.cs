@@ -1,4 +1,5 @@
-﻿using Studio_Chen.Data.Models;
+﻿using Studio_Chen.Core.Models;
+using Studio_Chen.Data.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +10,10 @@ namespace Studio_Chen.Core.Services
 {
     public interface IGymnastService
     {
-        List<Gymnast> GetList();
+        IEnumerable<Gymnast> GetList();
         Gymnast? GetById(int id);
-        Gymnast Add(Gymnast course);
-        Gymnast Update(Gymnast course);
-        void Delete(int id);
+        Gymnast Add(Gymnast gymnast);
+        Gymnast? Update(int id, Gymnast gymnast);
+        void Delete(Gymnast gymnast);
     }
 }

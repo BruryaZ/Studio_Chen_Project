@@ -6,4 +6,20 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <LangVersion>preview</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <LangVersion>preview</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Models\Lesson.cs~RF7f7ca28.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
+  </ItemGroup>
+
 </Project>

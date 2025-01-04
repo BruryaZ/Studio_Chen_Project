@@ -1,4 +1,5 @@
-﻿using Studio_Chen.Core.Repositories;
+﻿using Studio_Chen.Core.Models;
+using Studio_Chen.Core.Repositories;
 using Studio_Chen.Core.Services;
 using Studio_Chen.Data.Models;
 using Studio_Chen.Service.Services;
@@ -10,37 +11,50 @@ using System.Threading.Tasks;
 
 namespace Studio_Chen.Service
 {
-    public class GymnastService : IGymnastService
+    public class GymnastService(IRepositoryManager repositoryManager) : IGymnastService
     {
-        private readonly IGymnastRepository _gymnastRepository;
-        public GymnastService(IGymnastRepository gymnast)
+        private readonly IRepositoryManager _repositoryManager = repositoryManager;
+
+        public Gymnast Add(Gymnast gymnast)
         {
-            _gymnastRepository = gymnast;
+            _repositoryManager.GymnastRepository.Add(gymnast);
+            this._repositoryManager.Save();
+            return gymnast;
         }
 
-        public Gymnast Add(Gymnast course)
+        public void Delete(Gymnast gymnast)
         {
-            return _gymnastRepository.Add(course);
-        }
-
-        public void Delete(int id)
-        {
-            _gymnastRepository.Delete(id);
+            _repositoryManager.GymnastRepository.Delete(gymnast);
+            this._repositoryManager.Save();
         }
 
         public Gymnast? GetById(int id)
         {
-            return _gymnastRepository.GetById(id);
+            return _repositoryManager.GymnastRepository.GetById(id);
         }
 
-        public List<Gymnast> GetList()
+        public IEnumerable<Gymnast> GetList()
         {
-            return _gymnastRepository.GetAll();
+            return _repositoryManager.GymnastRepository.GetAll();
         }
 
-        public Gymnast Update(Gymnast course)
+        public Gymnast? Update(int id, Gymnast gymnast)
         {
-            return _gymnastRepository.Update(course);
+            var dbGymnast = GetById(id);
+            if (dbGymnast == null)
+            {
+                return null;
+            }
+            dbGymnast.Lessons = gymnast.Lessons;
+            dbGymnast.FirstName = gymnast.FirstName;
+            dbGymnast.LastName = gymnast.LastName;
+            dbGymnast.Phone = gymnast.Phone;
+            dbGymnast.Email = gymnast.Email;
+            dbGymnast.Address = gymnast.Address;
+
+            _repositoryManager.GymnastRepository.Update(dbGymnast);
+            _repositoryManager.Save();
+            return dbGymnast;
         }
     }
 }

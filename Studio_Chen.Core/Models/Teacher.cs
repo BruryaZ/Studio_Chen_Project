@@ -7,22 +7,19 @@ using System.Threading.Tasks;
 
 namespace Studio_Chen.Data.Models
 {
-    public class Teacher:Person
+    public class Teacher : Person
     {
-        private static int count = 1;
-        //[Key]
+        [Key]
         public int Id { get; private set; }
         public List<Lesson> Lessons { get; set; }
 
         public Teacher(List<Lesson> lessons, string identity, string firstName, string lastName, string phone, string email, string address) : base(identity, firstName, lastName, phone, email, address)
         {
             Lessons = lessons;
-            Id = count++;
         }
 
         public Teacher()
         {
-            Id = count++;
         }
     }
 }

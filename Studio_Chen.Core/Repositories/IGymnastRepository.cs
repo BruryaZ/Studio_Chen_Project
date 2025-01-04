@@ -1,4 +1,5 @@
-﻿using Studio_Chen.Data.Models;
+﻿using Studio_Chen.Core.Models;
+using Studio_Chen.Data.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

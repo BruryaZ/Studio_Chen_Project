@@ -17,16 +17,16 @@ namespace Studio_Chen.API.Controllers
         }
         // GET: api/<TeacherController>
         [HttpGet]
-        public IEnumerable<Teacher> Get()
+        public ActionResult Get()
         {
-            return _allTeachers.GetList();
+            return Ok(_allTeachers.GetList());
         }
 
         // GET api/<CourseController>/5
         [HttpGet("{id}")]
         public ActionResult Get(int id)
         {
-            var course = _allTeachers.GetList().Find(x => x.Id == id);
+            var course = _allTeachers.GetById(id);
             if (course == null)
                 return NotFound();
             return Ok(course);
@@ -34,39 +34,29 @@ namespace Studio_Chen.API.Controllers
 
         // POST api/<CourseController>
         [HttpPost]
-        public void Post([FromBody] Teacher value)
+        public ActionResult Post([FromBody] Teacher value)
         {
-            _allTeachers.GetList().Add(value);
+            return Ok(_allTeachers.Add(value));
         }
 
         // PUT api/<CourseController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] Teacher value)
+        public ActionResult Put(int id, [FromBody] Teacher value)
         {
-            for (int i = 0; i < _allTeachers.GetList().Count; i++)
-            {
-                if (_allTeachers.GetList()[i].Id == id)
-                {
-                    _allTeachers.GetList()[i].Identity = value.Identity;
-                    _allTeachers.GetList()[i].Address = value.Address;
-                    _allTeachers.GetList()[i].FirstName = value.FirstName;
-                    _allTeachers.GetList()[i].LastName = value.LastName;
-                    _allTeachers.GetList()[i].Email = value.Email;
-                    _allTeachers.GetList()[i].Phone = value.Phone;
-                    _allTeachers.GetList()[i].Lessons = value.Lessons;
-                }
-            }
+            return Ok(_allTeachers.Update(id, value));
         }
 
         // DELETE api/<CourseController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public ActionResult Delete(int id)
         {
-            for (int i = 0; i < _allTeachers.GetList().Count; i++)
+            var teacher = _allTeachers.GetById(id);
+            if (teacher is null)
             {
-                if (_allTeachers.GetList()[i].Id == id)
-                    _allTeachers.GetList().Remove(_allTeachers.GetList()[i]);
+                return NotFound();
             }
+            _allTeachers.Delete(teacher);
+            return NoContent();
         }
     }
 }

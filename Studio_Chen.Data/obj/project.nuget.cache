@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "lV3C8lXW5cit82x75lkczmgNSBjhP7YNjaPVHiRCZLgNp0xuS3yO5oLyKncAJkMEKGJhO7iXhsuClaTG4/JUcQ==",
+  "dgSpecHash": "0dy1Zelt5PVh9YOmIfn/2aZFbVQ2qUS+wZbAHnZoDNAIUZyUjzQfH3tiazrQfQFQzWwYtWE+4MT+wdq6H5ZMqA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user1\\Desktop\\תכנות\\Dot net\\הגשות\\הפרויקט\\מעודכן\\Studio_Chen\\Studio_Chen.Data\\Studio_Chen.Data.csproj",
+  "projectFilePath": "C:\\Users\\user1\\Desktop\\תכנות\\Dot net\\הגשות\\הפרויקט\\הכי מעודכן\\Studio_Chen\\Studio_Chen.Data\\Studio_Chen.Data.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\user1\\.nuget\\packages\\automapper\\7.0.1\\automapper.7.0.1.nupkg.sha512",
     "C:\\Users\\user1\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\user1\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\user1\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
@@ -64,6 +65,7 @@
     "C:\\Users\\user1\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\user1\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
     "C:\\Users\\user1\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+    "C:\\Users\\user1\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
     "C:\\Users\\user1\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
   "logs": []

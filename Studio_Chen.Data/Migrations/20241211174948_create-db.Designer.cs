@@ -69,7 +69,7 @@ namespace Studio_Chen.Data.Migrations
                     b.ToTable("LstCourses");
                 });
 
-            modelBuilder.Entity("Studio_Chen.Data.Models.Gymnast", b =>
+            modelBuilder.Entity("Studio_Chen.Data.Models.Course", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -106,7 +106,7 @@ namespace Studio_Chen.Data.Migrations
                     b.ToTable("LstGymnast");
                 });
 
-            modelBuilder.Entity("Studio_Chen.Data.Models.Lesson", b =>
+            modelBuilder.Entity("Studio_Chen.Data.Models.Course", b =>
                 {
                     b.Property<int>("Identity")
                         .ValueGeneratedOnAdd()
@@ -184,20 +184,20 @@ namespace Studio_Chen.Data.Migrations
 
             modelBuilder.Entity("GymnastLesson", b =>
                 {
-                    b.HasOne("Studio_Chen.Data.Models.Gymnast", null)
+                    b.HasOne("Studio_Chen.Data.Models.Course", null)
                         .WithMany()
                         .HasForeignKey("GymnastsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Studio_Chen.Data.Models.Lesson", null)
+                    b.HasOne("Studio_Chen.Data.Models.Course", null)
                         .WithMany()
                         .HasForeignKey("lessonsIdentity")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Studio_Chen.Data.Models.Lesson", b =>
+            modelBuilder.Entity("Studio_Chen.Data.Models.Course", b =>
                 {
                     b.HasOne("Studio_Chen.Data.Models.Course", "Course")
                         .WithMany("Lessons")

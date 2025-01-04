@@ -19,60 +19,46 @@ namespace Studio_Chen.API.Controllers
         }
         // GET: api/<LessonController>
         [HttpGet]
-        public IEnumerable<Lesson> Get()
+        public ActionResult Get()
         {
-            return _allLesson.GetList();
+            return Ok(_allLesson.GetList());
         }
 
         // GET api/<CourseController>/5
         [HttpGet("{id}")]
         public ActionResult Get(int id)
         {
-            var course = _allLesson.GetList().Find(x => x.Identity == id);
-            if (course == null)
+            var lesson = _allLesson.GetById(id);
+            if (lesson == null)
                 return NotFound();
-            return Ok(course);
+            return Ok(lesson);
         }
 
         // POST api/<CourseController>
         [HttpPost]
-        public void Post([FromBody] Lesson value)
+        public ActionResult Post([FromBody] Lesson value)
         {
-            _allLesson.GetList().Add(value);
+            return Ok(_allLesson.Add(value));
         }
 
         // PUT api/<CourseController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] Lesson value)
+        public ActionResult Put(int id, [FromBody] Lesson value)
         {
-            for (int i = 0; i < _allLesson.GetList().Count; i++)
-            {
-                if (_allLesson.GetList()[i].Identity == id)
-                {
-                    _allLesson.GetList()[i].CourseId = value.CourseId;
-                    _allLesson.GetList()[i].MeetNumber = value.MeetNumber;
-                    _allLesson.GetList()[i].EndHour = value.EndHour;
-                    _allLesson.GetList()[i].Date = value.Date;
-                    _allLesson.GetList()[i].StartHour = value.StartHour;
-                    _allLesson.GetList()[i].Teacher = value.Teacher;
-                    _allLesson.GetList()[i].Course = value.Course;
-                    _allLesson.GetList()[i].CourseId = value.CourseId;
-                    _allLesson.GetList()[i].Teacher = value.Teacher;
-                    _allLesson.GetList()[i].TeacherId = value.TeacherId;
-                    _allLesson.GetList()[i].Gymnasts = value.Gymnasts;
-                }
-            }
+            return Ok(_allLesson.Update(id, value));
         }
 
         // DELETE api/<CourseController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public ActionResult Delete(int id)
         {
-            for (int i = 0; i < _allLesson.GetList().Count; i++)
+            var lesson = _allLesson.GetById(id);
+            if (lesson is null)
             {
-                if (_allLesson.GetList()[i].Identity == id)
-                    _allLesson.GetList().Remove(_allLesson.GetList()[i]);
+                return NotFound();
             }
+            _allLesson.Delete(lesson);
+            return NoContent();
         }
     }
 }

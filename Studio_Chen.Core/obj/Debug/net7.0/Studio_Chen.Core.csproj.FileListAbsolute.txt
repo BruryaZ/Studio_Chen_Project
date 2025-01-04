@@ -22,3 +22,39 @@ C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\מעודכן
 C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\מעודכן\Studio_Chen\Studio_Chen.Core\obj\Debug\net7.0\refint\Studio_Chen.Core.dll
 C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\מעודכן\Studio_Chen\Studio_Chen.Core\obj\Debug\net7.0\Studio_Chen.Core.pdb
 C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\מעודכן\Studio_Chen\Studio_Chen.Core\obj\Debug\net7.0\ref\Studio_Chen.Core.dll
+Y:\Groups\Group_3\זרביב ברוריה\Dot net\הפרויקט\מעודכן\Studio_Chen\Studio_Chen.Core\bin\Debug\net7.0\Studio_Chen.Core.deps.json
+Y:\Groups\Group_3\זרביב ברוריה\Dot net\הפרויקט\מעודכן\Studio_Chen\Studio_Chen.Core\bin\Debug\net7.0\Studio_Chen.Core.dll
+Y:\Groups\Group_3\זרביב ברוריה\Dot net\הפרויקט\מעודכן\Studio_Chen\Studio_Chen.Core\bin\Debug\net7.0\Studio_Chen.Core.pdb
+Y:\Groups\Group_3\זרביב ברוריה\Dot net\הפרויקט\מעודכן\Studio_Chen\Studio_Chen.Core\obj\Debug\net7.0\Studio_Chen.Core.GeneratedMSBuildEditorConfig.editorconfig
+Y:\Groups\Group_3\זרביב ברוריה\Dot net\הפרויקט\מעודכן\Studio_Chen\Studio_Chen.Core\obj\Debug\net7.0\Studio_Chen.Core.AssemblyInfoInputs.cache
+Y:\Groups\Group_3\זרביב ברוריה\Dot net\הפרויקט\מעודכן\Studio_Chen\Studio_Chen.Core\obj\Debug\net7.0\Studio_Chen.Core.AssemblyInfo.cs
+Y:\Groups\Group_3\זרביב ברוריה\Dot net\הפרויקט\מעודכן\Studio_Chen\Studio_Chen.Core\obj\Debug\net7.0\Studio_Chen.Core.csproj.CoreCompileInputs.cache
+Y:\Groups\Group_3\זרביב ברוריה\Dot net\הפרויקט\מעודכן\Studio_Chen\Studio_Chen.Core\obj\Debug\net7.0\Studio_Chen.Core.sourcelink.json
+Y:\Groups\Group_3\זרביב ברוריה\Dot net\הפרויקט\מעודכן\Studio_Chen\Studio_Chen.Core\obj\Debug\net7.0\Studio_Chen.Core.dll
+Y:\Groups\Group_3\זרביב ברוריה\Dot net\הפרויקט\מעודכן\Studio_Chen\Studio_Chen.Core\obj\Debug\net7.0\refint\Studio_Chen.Core.dll
+Y:\Groups\Group_3\זרביב ברוריה\Dot net\הפרויקט\מעודכן\Studio_Chen\Studio_Chen.Core\obj\Debug\net7.0\Studio_Chen.Core.pdb
+Y:\Groups\Group_3\זרביב ברוריה\Dot net\הפרויקט\מעודכן\Studio_Chen\Studio_Chen.Core\obj\Debug\net7.0\ref\Studio_Chen.Core.dll
+D:\Dot net\הגשות\הפרויקט\הכי מעודכן\Studio_Chen\Studio_Chen.Core\bin\Debug\net7.0\Studio_Chen.Core.deps.json
+D:\Dot net\הגשות\הפרויקט\הכי מעודכן\Studio_Chen\Studio_Chen.Core\bin\Debug\net7.0\Studio_Chen.Core.dll
+D:\Dot net\הגשות\הפרויקט\הכי מעודכן\Studio_Chen\Studio_Chen.Core\bin\Debug\net7.0\Studio_Chen.Core.pdb
+D:\Dot net\הגשות\הפרויקט\הכי מעודכן\Studio_Chen\Studio_Chen.Core\obj\Debug\net7.0\Studio_Chen.Core.csproj.AssemblyReference.cache
+D:\Dot net\הגשות\הפרויקט\הכי מעודכן\Studio_Chen\Studio_Chen.Core\obj\Debug\net7.0\Studio_Chen.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dot net\הגשות\הפרויקט\הכי מעודכן\Studio_Chen\Studio_Chen.Core\obj\Debug\net7.0\Studio_Chen.Core.AssemblyInfoInputs.cache
+D:\Dot net\הגשות\הפרויקט\הכי מעודכן\Studio_Chen\Studio_Chen.Core\obj\Debug\net7.0\Studio_Chen.Core.AssemblyInfo.cs
+D:\Dot net\הגשות\הפרויקט\הכי מעודכן\Studio_Chen\Studio_Chen.Core\obj\Debug\net7.0\Studio_Chen.Core.csproj.CoreCompileInputs.cache
+D:\Dot net\הגשות\הפרויקט\הכי מעודכן\Studio_Chen\Studio_Chen.Core\obj\Debug\net7.0\Studio_Chen.Core.dll
+D:\Dot net\הגשות\הפרויקט\הכי מעודכן\Studio_Chen\Studio_Chen.Core\obj\Debug\net7.0\refint\Studio_Chen.Core.dll
+D:\Dot net\הגשות\הפרויקט\הכי מעודכן\Studio_Chen\Studio_Chen.Core\obj\Debug\net7.0\Studio_Chen.Core.pdb
+D:\Dot net\הגשות\הפרויקט\הכי מעודכן\Studio_Chen\Studio_Chen.Core\obj\Debug\net7.0\ref\Studio_Chen.Core.dll
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\הכי מעודכן\Studio_Chen\Studio_Chen.Core\bin\Debug\net7.0\Studio_Chen.Core.deps.json
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\הכי מעודכן\Studio_Chen\Studio_Chen.Core\bin\Debug\net7.0\Studio_Chen.Core.dll
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\הכי מעודכן\Studio_Chen\Studio_Chen.Core\bin\Debug\net7.0\Studio_Chen.Core.pdb
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\הכי מעודכן\Studio_Chen\Studio_Chen.Core\obj\Debug\net7.0\Studio_Chen.Core.csproj.AssemblyReference.cache
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\הכי מעודכן\Studio_Chen\Studio_Chen.Core\obj\Debug\net7.0\Studio_Chen.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\הכי מעודכן\Studio_Chen\Studio_Chen.Core\obj\Debug\net7.0\Studio_Chen.Core.AssemblyInfoInputs.cache
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\הכי מעודכן\Studio_Chen\Studio_Chen.Core\obj\Debug\net7.0\Studio_Chen.Core.AssemblyInfo.cs
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\הכי מעודכן\Studio_Chen\Studio_Chen.Core\obj\Debug\net7.0\Studio_Chen.Core.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\הכי מעודכן\Studio_Chen\Studio_Chen.Core\obj\Debug\net7.0\Studio_Chen.Core.dll
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\הכי מעודכן\Studio_Chen\Studio_Chen.Core\obj\Debug\net7.0\refint\Studio_Chen.Core.dll
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\הכי מעודכן\Studio_Chen\Studio_Chen.Core\obj\Debug\net7.0\Studio_Chen.Core.pdb
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\הכי מעודכן\Studio_Chen\Studio_Chen.Core\obj\Debug\net7.0\ref\Studio_Chen.Core.dll

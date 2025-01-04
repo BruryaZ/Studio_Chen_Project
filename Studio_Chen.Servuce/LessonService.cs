@@ -1,4 +1,5 @@
-﻿using Studio_Chen.Core.Repositories;
+﻿using Studio_Chen.Core.Models;
+using Studio_Chen.Core.Repositories;
 using Studio_Chen.Core.Services;
 using Studio_Chen.Data.Models;
 using Studio_Chen.Service.Services;
@@ -7,40 +8,57 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace Studio_Chen.Service
 {
-    public class LessonService : ILessonService
+    public class LessonService(IRepositoryManager repositoryManager) : ILessonService
     {
-        private readonly ILessonRepository _lessonRepository;
-        public LessonService(ILessonRepository lesson)
+        private readonly IRepositoryManager _repositoryManager = repositoryManager;
+
+        public Lesson Add(Lesson lesson)
         {
-            _lessonRepository = lesson;
+            _repositoryManager.LessonRepository.Add(lesson);
+            this._repositoryManager.Save();
+            return lesson;
         }
 
-        public Lesson Add(Lesson course)
+        public void Delete(Lesson lesson)
         {
-            return _lessonRepository.Add(course);
-        }
-
-        public void Delete(int id)
-        {
-            _lessonRepository.Delete(id);
+            _repositoryManager.LessonRepository.Delete(lesson);
+            this._repositoryManager.Save();
         }
 
         public Lesson? GetById(int id)
         {
-            return _lessonRepository.GetById(id);
+            return _repositoryManager.LessonRepository.GetById(id);
         }
 
-        public List<Lesson> GetList()
+        public IEnumerable<Lesson> GetList()
         {
-            return _lessonRepository.GetAll();
+            return _repositoryManager.LessonRepository.GetAll();
         }
 
-        public Lesson Update(Lesson course)
+        public Lesson? Update(int id, Lesson lesson)
         {
-            return _lessonRepository.Update(course);
+            var dbLesson = GetById(id);
+            if (dbLesson == null)
+            {
+                return null;
+            }
+            //dbLesson.CourseId = lesson.CourseId;
+            dbLesson.MeetNumber = lesson.MeetNumber;
+            dbLesson.EndHour = lesson.EndHour;
+            dbLesson.StartHour = lesson.StartHour;
+            dbLesson.Date = lesson.Date;
+            dbLesson.Course = lesson.Course;
+            dbLesson.Teacher = lesson.Teacher;
+            //dbLesson.TeacherId = lesson.TeacherId;
+            dbLesson.Gymnasts = lesson.Gymnasts;
+
+            _repositoryManager.LessonRepository.Update(dbLesson);
+            _repositoryManager.Save();
+            return dbLesson;
         }
     }
 }

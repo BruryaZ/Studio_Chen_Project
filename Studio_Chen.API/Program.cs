@@ -1,7 +1,7 @@
+using Studio_Chen.Core;
 using Studio_Chen.Core.Repositories;
 using Studio_Chen.Core.Services;
 using Studio_Chen.Data;
-using Studio_Chen.Data.Repositories;
 using Studio_Chen.Service;
 using Studio_Chen.Service.Services;
 
@@ -13,23 +13,17 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-////-----course-----
-//builder.Services.AddScoped<ICourseService, CourseService>();
-//builder.Services.AddScoped<ICourseRepository, CourseRepository>();
-////-----teacher-----
-//builder.Services.AddScoped<ITeacherService, TeacherService>();
-//builder.Services.AddScoped<ITeacherRepository, TeacherRepository>();
-////-----lesson-----
-//builder.Services.AddScoped<ILessonService, LessonService>();
-//builder.Services.AddScoped<ILessonRepository, LessonRepository>();
-////-----gymnast-----
-//builder.Services.AddScoped<IGymnastService, GymnastService>();
-//builder.Services.AddScoped<IGymnastRepository, GymnastRepository>();
 
-builder.Services.AddScoped<IRepositoryManager, IRepositoryManager>();
+builder.Services.AddScoped<ICourseService, CourseService>();
+builder.Services.AddScoped<ILessonService, LessonService>();
+builder.Services.AddScoped<ITeacherService, TeacherService>();
+builder.Services.AddScoped<IGymnastService, GymnastService>();
+
+builder.Services.AddScoped<IRepositoryManager, RepositoryManager>();
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+
 builder.Services.AddDbContext<DataContext>();
-//builder.Services.AddSingleton<DataContext>();
+builder.Services.AddAutoMapper(typeof(MappingProfile));//דואג להמרת טיפוסים ל-2 הכיוונים לפוט ולפוסט
 
 var app = builder.Build();
 
