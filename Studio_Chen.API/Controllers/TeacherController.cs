@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Studio_Chen.Core.Services;
 using Studio_Chen.Data.Models;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Studio_Chen.API.Controllers
 {
@@ -11,51 +11,60 @@ namespace Studio_Chen.API.Controllers
     public class TeacherController : ControllerBase
     {
         private readonly ITeacherService _allTeachers;
+
         public TeacherController(ITeacherService teacherService)
         {
             _allTeachers = teacherService;
         }
+
         // GET: api/<TeacherController>
         [HttpGet]
-        public ActionResult Get()
+        public async Task<ActionResult<IEnumerable<Teacher>>> GetAsync()
         {
-            return Ok(_allTeachers.GetList());
+            var teachers = await _allTeachers.GetListAsync();
+            return Ok(teachers);
         }
 
-        // GET api/<CourseController>/5
+        // GET api/<TeacherController>/5
         [HttpGet("{id}")]
-        public ActionResult Get(int id)
+        public async Task<ActionResult<Teacher>> GetAsync(int id)
         {
-            var course = _allTeachers.GetById(id);
-            if (course == null)
+            var teacher = await _allTeachers.GetByIdAsync(id);
+            if (teacher == null)
                 return NotFound();
-            return Ok(course);
+            return Ok(teacher);
         }
 
-        // POST api/<CourseController>
+        // POST api/<TeacherController>
         [HttpPost]
-        public ActionResult Post([FromBody] Teacher value)
+        public async Task<ActionResult<Teacher>> PostAsync([FromBody] Teacher value)
         {
-            return Ok(_allTeachers.Add(value));
+            var createdTeacher = await _allTeachers.AddAsync(value);
+            return Ok(createdTeacher);
         }
 
-        // PUT api/<CourseController>/5
+        // PUT api/<TeacherController>/5
         [HttpPut("{id}")]
-        public ActionResult Put(int id, [FromBody] Teacher value)
+        public async Task<ActionResult<Teacher>> PutAsync(int id, [FromBody] Teacher value)
         {
-            return Ok(_allTeachers.Update(id, value));
+            var updatedTeacher = await _allTeachers.UpdateAsync(id, value);
+            if (updatedTeacher == null)
+            {
+                return NotFound();
+            }
+            return Ok(updatedTeacher);
         }
 
-        // DELETE api/<CourseController>/5
+        // DELETE api/<TeacherController>/5
         [HttpDelete("{id}")]
-        public ActionResult Delete(int id)
+        public async Task<ActionResult> DeleteAsync(int id)
         {
-            var teacher = _allTeachers.GetById(id);
+            var teacher = await _allTeachers.GetByIdAsync(id);
             if (teacher is null)
             {
                 return NotFound();
             }
-            _allTeachers.Delete(teacher);
+            await _allTeachers.DeleteAsync(teacher);
             return NoContent();
         }
     }

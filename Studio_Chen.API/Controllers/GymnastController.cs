@@ -3,8 +3,8 @@ using Studio_Chen.Core.Models;
 using Studio_Chen.Core.Services;
 using Studio_Chen.Data.Models;
 using Studio_Chen.Service.Services;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Studio_Chen.API.Controllers
 {
@@ -13,51 +13,60 @@ namespace Studio_Chen.API.Controllers
     public class GymnastController : ControllerBase
     {
         private readonly IGymnastService _allGymnast;
-        public GymnastController(IGymnastService courseService)
+
+        public GymnastController(IGymnastService gymnastService)
         {
-            _allGymnast = courseService;
-        }
-        // GET: api/<GymnastController>
-        [HttpGet]
-        public ActionResult<Lesson> Get()
-        {
-            return Ok(_allGymnast.GetList());
+            _allGymnast = gymnastService;
         }
 
-        // GET api/<CourseController>/5
-        [HttpGet("{id}")]
-        public ActionResult Get(int id)
+        // GET: api/<GymnastController>
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Gymnast>>> GetAsync()
         {
-            var gymnast = _allGymnast.GetById(id);
+            var gymnasts = await _allGymnast.GetListAsync();
+            return Ok(gymnasts);
+        }
+
+        // GET api/<GymnastController>/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Gymnast>> GetAsync(int id)
+        {
+            var gymnast = await _allGymnast.GetByIdAsync(id);
             if (gymnast == null)
                 return NotFound();
             return Ok(gymnast);
         }
 
-        // POST api/<CourseController>
+        // POST api/<GymnastController>
         [HttpPost]
-        public ActionResult Post([FromBody] Gymnast value)
+        public async Task<ActionResult<Gymnast>> PostAsync([FromBody] Gymnast value)
         {
-            return Ok(_allGymnast.Add(value));
+            var createdGymnast = await _allGymnast.AddAsync(value);
+            return Ok(createdGymnast);
         }
 
-        // PUT api/<CourseController>/5
+        // PUT api/<GymnastController>/5
         [HttpPut("{id}")]
-        public ActionResult Put(int id, [FromBody] Gymnast value)
+        public async Task<ActionResult<Gymnast>> PutAsync(int id, [FromBody] Gymnast value)
         {
-            return Ok(_allGymnast.Update(id, value));
+            var updatedGymnast = await _allGymnast.UpdateAsync(id, value);
+            if (updatedGymnast == null)
+            {
+                return NotFound();
+            }
+            return Ok(updatedGymnast);
         }
 
-        // DELETE api/<CourseController>/5
+        // DELETE api/<GymnastController>/5
         [HttpDelete("{id}")]
-        public ActionResult Delete(int id)
+        public async Task<ActionResult> DeleteAsync(int id)
         {
-            var gymnast = _allGymnast.GetById(id);
+            var gymnast = await _allGymnast.GetByIdAsync(id);
             if (gymnast is null)
             {
                 return NotFound();
             }
-            _allGymnast.Delete(gymnast);
+            await _allGymnast.DeleteAsync(gymnast);
             return NoContent();
         }
     }

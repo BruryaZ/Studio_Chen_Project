@@ -1,10 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Studio_Chen.Core.Repositories;
 using Studio_Chen.Core.Services;
 using Studio_Chen.Data.Models;
-using Studio_Chen.Service.Services;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Studio_Chen.API.Controllers
 {
@@ -13,51 +11,60 @@ namespace Studio_Chen.API.Controllers
     public class LessonController : ControllerBase
     {
         private readonly ILessonService _allLesson;
-        public LessonController(ILessonService courseService)
+
+        public LessonController(ILessonService lessonService)
         {
-            _allLesson = courseService;
-        }
-        // GET: api/<LessonController>
-        [HttpGet]
-        public ActionResult Get()
-        {
-            return Ok(_allLesson.GetList());
+            _allLesson = lessonService;
         }
 
-        // GET api/<CourseController>/5
-        [HttpGet("{id}")]
-        public ActionResult Get(int id)
+        // GET: api/<LessonController>
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Lesson>>> GetAsync()
         {
-            var lesson = _allLesson.GetById(id);
+            var lessons = await _allLesson.GetListAsync();
+            return Ok(lessons);
+        }
+
+        // GET api/<LessonController>/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Lesson>> GetAsync(int id)
+        {
+            var lesson = await _allLesson.GetByIdAsync(id);
             if (lesson == null)
                 return NotFound();
             return Ok(lesson);
         }
 
-        // POST api/<CourseController>
+        // POST api/<LessonController>
         [HttpPost]
-        public ActionResult Post([FromBody] Lesson value)
+        public async Task<ActionResult<Lesson>> PostAsync([FromBody] Lesson value)
         {
-            return Ok(_allLesson.Add(value));
+            var createdLesson = await _allLesson.AddAsync(value);
+            return Ok(createdLesson);
         }
 
-        // PUT api/<CourseController>/5
+        // PUT api/<LessonController>/5
         [HttpPut("{id}")]
-        public ActionResult Put(int id, [FromBody] Lesson value)
+        public async Task<ActionResult<Lesson>> PutAsync(int id, [FromBody] Lesson value)
         {
-            return Ok(_allLesson.Update(id, value));
+            var updatedLesson = await _allLesson.UpdateAsync(id, value);
+            if (updatedLesson == null)
+            {
+                return NotFound();
+            }
+            return Ok(updatedLesson);
         }
 
-        // DELETE api/<CourseController>/5
+        // DELETE api/<LessonController>/5
         [HttpDelete("{id}")]
-        public ActionResult Delete(int id)
+        public async Task<ActionResult> DeleteAsync(int id)
         {
-            var lesson = _allLesson.GetById(id);
+            var lesson = await _allLesson.GetByIdAsync(id);
             if (lesson is null)
             {
                 return NotFound();
             }
-            _allLesson.Delete(lesson);
+            await _allLesson.DeleteAsync(lesson);
             return NoContent();
         }
     }

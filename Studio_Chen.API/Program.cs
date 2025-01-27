@@ -1,3 +1,4 @@
+using Studio_Chen.API;
 using Studio_Chen.Core;
 using Studio_Chen.Core.Repositories;
 using Studio_Chen.Core.Services;
@@ -37,6 +38,9 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+// My middlwares:
+app.UseShabbat();
 
 app.MapControllers();
 
