@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0dy1Zelt5PVh9YOmIfn/2aZFbVQ2qUS+wZbAHnZoDNAIUZyUjzQfH3tiazrQfQFQzWwYtWE+4MT+wdq6H5ZMqA==",
+  "dgSpecHash": "ZiM5Bwfu+HwLSMCLvHLj5b1fpfT3JbZO/jG/xs0XUqLPiNp/GmeyAjsysZvWyDuvUHkchIyCYa4uydisVtNKeg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user1\\Desktop\\תכנות\\Dot net\\הגשות\\הפרויקט\\הכי מעודכן\\Studio_Chen\\Studio_Chen.Data\\Studio_Chen.Data.csproj",
+  "projectFilePath": "C:\\Users\\user1\\Desktop\\תכנות\\Dot net\\הגשות\\הפרויקט\\הכי מעודכן\\‏‏תיקיה חדשה\\Studio_Chen_Project\\Studio_Chen.Data\\Studio_Chen.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user1\\.nuget\\packages\\automapper\\7.0.1\\automapper.7.0.1.nupkg.sha512",
     "C:\\Users\\user1\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",

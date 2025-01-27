@@ -2,45 +2,46 @@
 using Studio_Chen.Core.Repositories;
 using Studio_Chen.Core.Services;
 using Studio_Chen.Data.Models;
-using Studio_Chen.Service.Services;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Studio_Chen.Service
 {
-    public class TeacherService(IRepositoryManager repositoryManager) : ITeacherService
+    public class TeacherService : ITeacherService
     {
-        private readonly IRepositoryManager _repositoryManager = repositoryManager;
+        private readonly IRepositoryManager _repositoryManager;
 
-        public Teacher Add(Teacher teacher)
+        public TeacherService(IRepositoryManager repositoryManager)
         {
-            _repositoryManager.TeacherRepository.Add(teacher);
-            this._repositoryManager.Save();
+            _repositoryManager = repositoryManager;
+        }
+
+        public async Task<Teacher> AddAsync(Teacher teacher)
+        {
+            await _repositoryManager.TeacherRepository.AddAsync(teacher);
+            await _repositoryManager.SaveAsync(); // שמירה אסינכרונית
             return teacher;
         }
 
-        public void Delete(Teacher teacher)
+        public async Task DeleteAsync(Teacher teacher)
         {
-            _repositoryManager.TeacherRepository.Delete(teacher);
-            this._repositoryManager.Save();
+            await _repositoryManager.TeacherRepository.DeleteAsync(teacher);
+            await _repositoryManager.SaveAsync(); // שמירה אסינכרונית
         }
 
-        public Teacher? GetById(int id)
+        public async Task<Teacher?> GetByIdAsync(int id)
         {
-            return _repositoryManager.TeacherRepository.GetById(id);
+            return await _repositoryManager.TeacherRepository.GetByIdAsync(id);
         }
 
-        public IEnumerable<Teacher> GetList()
+        public async Task<IEnumerable<Teacher>> GetListAsync()
         {
-            return _repositoryManager.TeacherRepository.GetAll();
+            return await _repositoryManager.TeacherRepository.GetAllAsync();
         }
 
-        public Teacher? Update(int id, Teacher teacher)
+        public async Task<Teacher?> UpdateAsync(int id, Teacher teacher)
         {
-            var dbTeacher = GetById(id);
+            var dbTeacher = await GetByIdAsync(id);
             if (dbTeacher == null)
             {
                 return null;
@@ -52,8 +53,8 @@ namespace Studio_Chen.Service
             dbTeacher.Email = teacher.Email;
             dbTeacher.Address = teacher.Address;
 
-            _repositoryManager.TeacherRepository.Update(dbTeacher);
-            _repositoryManager.Save();
+            await _repositoryManager.TeacherRepository.UpdateAsync(dbTeacher.Id, dbTeacher);
+            await _repositoryManager.SaveAsync(); // שמירה אסינכרונית
             return dbTeacher;
         }
     }

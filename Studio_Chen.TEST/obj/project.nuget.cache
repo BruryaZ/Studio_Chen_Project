@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+GriR6f+5z5st/HaMUsTRJW9ZDRL0Ycy8R63XyW1KtE0OifOjl8Of+PH1tYMju2YDbF5SplAc9qeyai6w4SmwQ==",
+  "dgSpecHash": "thLUOr4VuMvEi2MxGlhoH1iAVg4HS+AxmvywbaMl/Y5/w4E08iPpgmJAg/ZcH/FQN4qfMi0OYV+uyprb2yVNUg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user1\\Desktop\\תכנות\\Dot net\\הגשות\\הפרויקט\\הכי מעודכן\\Studio_Chen\\Studio_Chen.TEST\\Studio_Chen.TEST.csproj",
+  "projectFilePath": "C:\\Users\\user1\\Desktop\\תכנות\\Dot net\\הגשות\\הפרויקט\\הכי מעודכן\\‏‏תיקיה חדשה\\Studio_Chen_Project\\Studio_Chen.TEST\\Studio_Chen.TEST.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user1\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\user1\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

@@ -25,9 +25,9 @@ namespace Studio_Chen.Core.Repositories
             TeacherRepository = teachers;
             GymnastRepository = gymnasts;
         }
-        public void Save()
+        public async Task SaveAsync()
         {
-            _dataContext.SaveChanges();
+            await _dataContext.SaveChangesAsync();
         }
     }
 }

@@ -10,10 +10,10 @@ namespace Studio_Chen.Core.Services
 {
     public interface IGymnastService
     {
-        IEnumerable<Gymnast> GetList();
-        Gymnast? GetById(int id);
-        Gymnast Add(Gymnast gymnast);
-        Gymnast? Update(int id, Gymnast gymnast);
-        void Delete(Gymnast gymnast);
+        Task<IEnumerable<Gymnast>> GetListAsync();
+        Task<Gymnast?> GetByIdAsync(int id);
+        Task<Gymnast> AddAsync(Gymnast gymnast);
+        Task<Gymnast?> UpdateAsync(int id, Gymnast gymnast);
+        Task DeleteAsync(Gymnast gymnast);
     }
 }

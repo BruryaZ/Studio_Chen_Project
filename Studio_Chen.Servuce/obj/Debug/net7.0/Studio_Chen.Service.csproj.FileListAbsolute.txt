@@ -84,3 +84,20 @@ C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\הכי מע�
 C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\הכי מעודכן\Studio_Chen\Studio_Chen.Servuce\obj\Debug\net7.0\refint\Studio_Chen.Service.dll
 C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\הכי מעודכן\Studio_Chen\Studio_Chen.Servuce\obj\Debug\net7.0\Studio_Chen.Service.pdb
 C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\הכי מעודכן\Studio_Chen\Studio_Chen.Servuce\obj\Debug\net7.0\ref\Studio_Chen.Service.dll
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\הכי מעודכן\‏‏תיקיה חדשה\Studio_Chen_Project\Studio_Chen.Servuce\bin\Debug\net7.0\Studio_Chen.Service.deps.json
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\הכי מעודכן\‏‏תיקיה חדשה\Studio_Chen_Project\Studio_Chen.Servuce\bin\Debug\net7.0\Studio_Chen.Service.dll
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\הכי מעודכן\‏‏תיקיה חדשה\Studio_Chen_Project\Studio_Chen.Servuce\bin\Debug\net7.0\Studio_Chen.Service.pdb
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\הכי מעודכן\‏‏תיקיה חדשה\Studio_Chen_Project\Studio_Chen.Servuce\bin\Debug\net7.0\Studio_Chen.Core.dll
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\הכי מעודכן\‏‏תיקיה חדשה\Studio_Chen_Project\Studio_Chen.Servuce\bin\Debug\net7.0\Studio_Chen.Data.dll
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\הכי מעודכן\‏‏תיקיה חדשה\Studio_Chen_Project\Studio_Chen.Servuce\bin\Debug\net7.0\Studio_Chen.Data.pdb
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\הכי מעודכן\‏‏תיקיה חדשה\Studio_Chen_Project\Studio_Chen.Servuce\bin\Debug\net7.0\Studio_Chen.Core.pdb
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\הכי מעודכן\‏‏תיקיה חדשה\Studio_Chen_Project\Studio_Chen.Servuce\obj\Debug\net7.0\Studio_Chen.Service.csproj.AssemblyReference.cache
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\הכי מעודכן\‏‏תיקיה חדשה\Studio_Chen_Project\Studio_Chen.Servuce\obj\Debug\net7.0\Studio_Chen.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\הכי מעודכן\‏‏תיקיה חדשה\Studio_Chen_Project\Studio_Chen.Servuce\obj\Debug\net7.0\Studio_Chen.Service.AssemblyInfoInputs.cache
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\הכי מעודכן\‏‏תיקיה חדשה\Studio_Chen_Project\Studio_Chen.Servuce\obj\Debug\net7.0\Studio_Chen.Service.AssemblyInfo.cs
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\הכי מעודכן\‏‏תיקיה חדשה\Studio_Chen_Project\Studio_Chen.Servuce\obj\Debug\net7.0\Studio_Chen.Service.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\הכי מעודכן\‏‏תיקיה חדשה\Studio_Chen_Project\Studio_Chen.Servuce\obj\Debug\net7.0\Studio_Chen.Service.csproj.CopyComplete
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\הכי מעודכן\‏‏תיקיה חדשה\Studio_Chen_Project\Studio_Chen.Servuce\obj\Debug\net7.0\Studio_Chen.Service.dll
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\הכי מעודכן\‏‏תיקיה חדשה\Studio_Chen_Project\Studio_Chen.Servuce\obj\Debug\net7.0\refint\Studio_Chen.Service.dll
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\הכי מעודכן\‏‏תיקיה חדשה\Studio_Chen_Project\Studio_Chen.Servuce\obj\Debug\net7.0\Studio_Chen.Service.pdb
+C:\Users\user1\Desktop\תכנות\Dot net\הגשות\הפרויקט\הכי מעודכן\‏‏תיקיה חדשה\Studio_Chen_Project\Studio_Chen.Servuce\obj\Debug\net7.0\ref\Studio_Chen.Service.dll

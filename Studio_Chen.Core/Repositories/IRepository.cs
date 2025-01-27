@@ -8,14 +8,14 @@ namespace Studio_Chen.Core.Repositories
 {
     public interface IRepository<T> where T : class
     {
-        IEnumerable<T> GetAll();
+        Task<IEnumerable<T>> GetAllAsync();
 
-        T? GetById(int id);
+        Task<T?> GetByIdAsync(int id);
 
-        T Add(T entity);
+        Task<T> AddAsync(T entity);
 
-        T Update(T entity);
+        Task<T> UpdateAsync(int id, T entity);
 
-        void Delete(T entity);
+        Task DeleteAsync(T entity);
     }
 }

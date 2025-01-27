@@ -9,10 +9,10 @@ namespace Studio_Chen.Core.Services
 {
     public interface ILessonService
     {
-        IEnumerable<Lesson> GetList();
-        Lesson? GetById(int id);
-        Lesson Add(Lesson course);
-        Lesson? Update(int id, Lesson course);
-        void Delete(Lesson lesson);
+        Task<IEnumerable<Lesson>> GetListAsync();
+        Task<Lesson?> GetByIdAsync(int id);
+        Task<Lesson> AddAsync(Lesson lesson);
+        Task<Lesson?> UpdateAsync(int id, Lesson lesson);
+        Task DeleteAsync(Lesson lesson);
     }
 }

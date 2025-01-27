@@ -1,6 +1,4 @@
-﻿
-
-using Studio_Chen.Core.Models;
+﻿using Studio_Chen.Core.Models;
 using Studio_Chen.Core.Repositories;
 using Studio_Chen.Data.Models;
 using Studio_Chen.Service.Services;
@@ -12,32 +10,26 @@ namespace Studio_Chen.Service
     {
         private readonly IRepositoryManager _repositoryManager = repositoryManager;
 
-        public Course Add(Course course)
+        public async Task<Course> AddAsync(Course course)
         {
-            _repositoryManager.CourseRepository.Add(course);
-            _repositoryManager.Save();
+            _repositoryManager.CourseRepository.AddAsync(course);
+            await _repositoryManager.SaveAsync();
             return course;
         }
 
-        public void Delete(Course course)
+        public async Task<Course?> GetByIdAsync(int id)
         {
-            _repositoryManager.CourseRepository.Delete(course);
-            this._repositoryManager.Save();
+            return await _repositoryManager.CourseRepository.GetByIdAsync(id);
         }
 
-        public Course? GetById(int id)
+        public async Task<IEnumerable<Course>> GetListAsync()
         {
-            return _repositoryManager.CourseRepository.GetById(id);
+            return await _repositoryManager.CourseRepository.GetAllAsync();
         }
 
-        public IEnumerable<Course> GetList()
+        public async Task<Course?> UpdateAsync(int id, Course course)
         {
-            return _repositoryManager.CourseRepository.GetAll();
-        }
-
-        public Course? Update(int id, Course course)
-        {
-            var dbCourse = GetById(id);
+            var dbCourse = GetByIdAsync(id).Result;
             if (dbCourse == null)
             {
                 return null;
@@ -48,9 +40,16 @@ namespace Studio_Chen.Service
             dbCourse.Lessons = course.Lessons;
             dbCourse.Type = course.Type;
 
-            _repositoryManager.CourseRepository.Update(dbCourse);
-            _repositoryManager.Save();
+            var result = await _repositoryManager.CourseRepository.UpdateAsync(dbCourse.Id, dbCourse);
+            await _repositoryManager.SaveAsync();
             return dbCourse;
+        }
+
+
+        public async Task DeleteAsync(Course course)
+        {
+            _repositoryManager.CourseRepository.DeleteAsync(course);
+            await this._repositoryManager.SaveAsync();
         }
     }
 }

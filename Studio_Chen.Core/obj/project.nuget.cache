@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YcNQ6ETJS/l21KgGSzjnOOEv6gXQsXl6FF7yBmHF96TJLbtdX4Uf0FiNQjgHw5MDKTPJ77e42hQmxMHF7zlGeg==",
+  "dgSpecHash": "Q1T0rWySV1Yq6e/ABEoGXuWcJsqkEtP/jgRE5OlsQpyh56GAkjv8Ef840ShUlZA201DCSpusHQXV5diRw8DuKA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user1\\Desktop\\תכנות\\Dot net\\הגשות\\הפרויקט\\הכי מעודכן\\Studio_Chen\\Studio_Chen.Core\\Studio_Chen.Core.csproj",
+  "projectFilePath": "C:\\Users\\user1\\Desktop\\תכנות\\Dot net\\הגשות\\הפרויקט\\הכי מעודכן\\‏‏תיקיה חדשה\\Studio_Chen_Project\\Studio_Chen.Core\\Studio_Chen.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user1\\.nuget\\packages\\automapper\\7.0.1\\automapper.7.0.1.nupkg.sha512",
     "C:\\Users\\user1\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"

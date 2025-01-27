@@ -15,6 +15,6 @@ namespace Studio_Chen.Core.Repositories
         IRepository<Gymnast> GymnastRepository { get; }
         IRepository<Lesson> LessonRepository { get; }
         IRepository<Teacher> TeacherRepository { get; }
-        void Save();
+        Task SaveAsync();
     }
 }

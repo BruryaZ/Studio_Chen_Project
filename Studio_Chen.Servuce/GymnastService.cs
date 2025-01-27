@@ -2,45 +2,46 @@
 using Studio_Chen.Core.Repositories;
 using Studio_Chen.Core.Services;
 using Studio_Chen.Data.Models;
-using Studio_Chen.Service.Services;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Studio_Chen.Service
 {
-    public class GymnastService(IRepositoryManager repositoryManager) : IGymnastService
+    public class GymnastService : IGymnastService
     {
-        private readonly IRepositoryManager _repositoryManager = repositoryManager;
+        private readonly IRepositoryManager _repositoryManager;
 
-        public Gymnast Add(Gymnast gymnast)
+        public GymnastService(IRepositoryManager repositoryManager)
         {
-            _repositoryManager.GymnastRepository.Add(gymnast);
-            this._repositoryManager.Save();
+            _repositoryManager = repositoryManager;
+        }
+
+        public async Task<Gymnast> AddAsync(Gymnast gymnast)
+        {
+            await _repositoryManager.GymnastRepository.AddAsync(gymnast);
+            await _repositoryManager.SaveAsync(); 
             return gymnast;
         }
 
-        public void Delete(Gymnast gymnast)
+        public async Task DeleteAsync(Gymnast gymnast)
         {
-            _repositoryManager.GymnastRepository.Delete(gymnast);
-            this._repositoryManager.Save();
+            await _repositoryManager.GymnastRepository.DeleteAsync(gymnast);
+            await _repositoryManager.SaveAsync();
         }
 
-        public Gymnast? GetById(int id)
+        public async Task<Gymnast?> GetByIdAsync(int id)
         {
-            return _repositoryManager.GymnastRepository.GetById(id);
+            return await _repositoryManager.GymnastRepository.GetByIdAsync(id);
         }
 
-        public IEnumerable<Gymnast> GetList()
+        public async Task<IEnumerable<Gymnast>> GetListAsync()
         {
-            return _repositoryManager.GymnastRepository.GetAll();
+            return await _repositoryManager.GymnastRepository.GetAllAsync();
         }
 
-        public Gymnast? Update(int id, Gymnast gymnast)
+        public async Task<Gymnast?> UpdateAsync(int id, Gymnast gymnast)
         {
-            var dbGymnast = GetById(id);
+            var dbGymnast = await GetByIdAsync(id);
             if (dbGymnast == null)
             {
                 return null;
@@ -52,8 +53,8 @@ namespace Studio_Chen.Service
             dbGymnast.Email = gymnast.Email;
             dbGymnast.Address = gymnast.Address;
 
-            _repositoryManager.GymnastRepository.Update(dbGymnast);
-            _repositoryManager.Save();
+            await _repositoryManager.GymnastRepository.UpdateAsync(dbGymnast.Id, dbGymnast);
+            await _repositoryManager.SaveAsync(); 
             return dbGymnast;
         }
     }

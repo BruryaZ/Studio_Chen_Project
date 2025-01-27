@@ -4,10 +4,9 @@ using Studio_Chen.API.Models;
 using Studio_Chen.Core.DTO_s;
 using Studio_Chen.Core.Models;
 using Studio_Chen.Data.Models;
-using Studio_Chen.Service;
 using Studio_Chen.Service.Services;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Studio_Chen.API.Controllers
 {
@@ -23,11 +22,12 @@ namespace Studio_Chen.API.Controllers
             _allCourses = courseService;
             _mapper = mapper;
         }
-        //GET: api/<CourseController>
+
+        // GET: api/<CourseController>
         [HttpGet]
-        public ActionResult Get()
+        public async Task<ActionResult<IEnumerable<CourseDTO>>> GetAsync()
         {
-            var courses = _allCourses.GetList();
+            var courses = await _allCourses.GetListAsync();
             var coursesDTO = _mapper.Map<IEnumerable<CourseDTO>>(courses);
 
             return Ok(coursesDTO);
@@ -35,9 +35,9 @@ namespace Studio_Chen.API.Controllers
 
         // GET api/<CourseController>/5
         [HttpGet("{id}")]
-        public ActionResult Get(int id)
+        public async Task<ActionResult<CourseDTO>> GetAsync(int id)
         {
-            var course = _allCourses.GetById(id);
+            var course = await _allCourses.GetByIdAsync(id);
             if (course == null)
                 return NotFound();
             return Ok(_mapper.Map<CourseDTO>(course));
@@ -45,30 +45,35 @@ namespace Studio_Chen.API.Controllers
 
         // POST api/<CourseController>
         [HttpPost]
-        public ActionResult Post([FromBody] CoursePostModel value)
+        public async Task<ActionResult<CourseDTO>> PostAsync([FromBody] CoursePostModel value)
         {
             var course = _mapper.Map<Course>(value);
-            return Ok(_allCourses.Add(course));
+            var createdCourse = await _allCourses.AddAsync(course);
+            return Ok(_mapper.Map<CourseDTO>(createdCourse));
         }
 
         // PUT api/<CourseController>/5
         [HttpPut("{id}")]
-        public ActionResult Put(int id, [FromBody] Course value)
+        public async Task<ActionResult<CourseDTO>> PutAsync(int id, [FromBody] Course value)
         {
-            var course = _allCourses.Update(id, _mapper.Map<Course>(value));
-            return Ok(course);
+            var updatedCourse = await _allCourses.UpdateAsync(id, _mapper.Map<Course>(value));
+            if (updatedCourse == null)
+            {
+                return NotFound();
+            }
+            return Ok(_mapper.Map<CourseDTO>(updatedCourse));
         }
 
         // DELETE api/<CourseController>/5
         [HttpDelete("{id}")]
-        public ActionResult Delete(int id)
+        public async Task<ActionResult> DeleteAsync(int id)
         {
-            var course = _allCourses.GetById(id);
+            var course = await _allCourses.GetByIdAsync(id);
             if (course is null)
             {
                 return NotFound();
             }
-            _allCourses.Delete(course);
+            await _allCourses.DeleteAsync(course);
             return NoContent();
         }
     }

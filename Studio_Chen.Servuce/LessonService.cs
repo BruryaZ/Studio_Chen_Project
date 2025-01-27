@@ -1,63 +1,60 @@
-﻿using Studio_Chen.Core.Models;
+﻿using Studio_Chen.Data.Models;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Studio_Chen.Core.Repositories;
 using Studio_Chen.Core.Services;
-using Studio_Chen.Data.Models;
-using Studio_Chen.Service.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
 
 namespace Studio_Chen.Service
 {
-    public class LessonService(IRepositoryManager repositoryManager) : ILessonService
+    public class LessonService : ILessonService
     {
-        private readonly IRepositoryManager _repositoryManager = repositoryManager;
+        private readonly IRepositoryManager _repositoryManager;
 
-        public Lesson Add(Lesson lesson)
+        public LessonService(IRepositoryManager repositoryManager)
         {
-            _repositoryManager.LessonRepository.Add(lesson);
-            this._repositoryManager.Save();
+            _repositoryManager = repositoryManager;
+        }
+
+        public async Task<Lesson> AddAsync(Lesson lesson)
+        {
+            await _repositoryManager.LessonRepository.AddAsync(lesson);
+            await _repositoryManager.SaveAsync(); // שמירה אסינכרונית
             return lesson;
         }
 
-        public void Delete(Lesson lesson)
+        public async Task DeleteAsync(Lesson lesson)
         {
-            _repositoryManager.LessonRepository.Delete(lesson);
-            this._repositoryManager.Save();
+            await _repositoryManager.LessonRepository.DeleteAsync(lesson);
+            await _repositoryManager.SaveAsync(); // שמירה אסינכרונית
         }
 
-        public Lesson? GetById(int id)
+        public async Task<Lesson?> GetByIdAsync(int id)
         {
-            return _repositoryManager.LessonRepository.GetById(id);
+            return await _repositoryManager.LessonRepository.GetByIdAsync(id);
         }
 
-        public IEnumerable<Lesson> GetList()
+        public async Task<IEnumerable<Lesson>> GetListAsync()
         {
-            return _repositoryManager.LessonRepository.GetAll();
+            return await _repositoryManager.LessonRepository.GetAllAsync();
         }
 
-        public Lesson? Update(int id, Lesson lesson)
+        public async Task<Lesson?> UpdateAsync(int id, Lesson lesson)
         {
-            var dbLesson = GetById(id);
+            var dbLesson = await GetByIdAsync(id);
             if (dbLesson == null)
             {
                 return null;
             }
-            //dbLesson.CourseId = lesson.CourseId;
             dbLesson.MeetNumber = lesson.MeetNumber;
             dbLesson.EndHour = lesson.EndHour;
             dbLesson.StartHour = lesson.StartHour;
             dbLesson.Date = lesson.Date;
             dbLesson.Course = lesson.Course;
             dbLesson.Teacher = lesson.Teacher;
-            //dbLesson.TeacherId = lesson.TeacherId;
             dbLesson.Gymnasts = lesson.Gymnasts;
 
-            _repositoryManager.LessonRepository.Update(dbLesson);
-            _repositoryManager.Save();
+            await _repositoryManager.LessonRepository.UpdateAsync(dbLesson.Id, dbLesson);
+            await _repositoryManager.SaveAsync(); // שמירה אסינכרונית
             return dbLesson;
         }
     }

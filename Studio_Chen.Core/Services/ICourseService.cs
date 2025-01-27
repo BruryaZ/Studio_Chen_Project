@@ -10,10 +10,10 @@ namespace Studio_Chen.Service.Services
 {
     public interface ICourseService
     {
-        IEnumerable<Course> GetList();
-        Course? GetById(int id);
-        Course Add(Course course);
-        Course? Update(int id, Course course);
-        void Delete(Course course);
+        Task<IEnumerable<Course>> GetListAsync();
+        Task<Course?> GetByIdAsync(int id);
+        Task<Course> AddAsync(Course course);
+        Task<Course?> UpdateAsync(int id, Course course);
+        Task DeleteAsync(Course course);
     }
 }
